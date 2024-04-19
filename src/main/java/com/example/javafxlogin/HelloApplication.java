@@ -10,15 +10,14 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        CreateTable.create();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        scene.getStylesheets().add(getClass()
-                .getResource("styles.css").toExternalForm());
+        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+//        scene.getStylesheets().add(getClass()
+//                .getResource("styles.css").toExternalForm());
         stage.setTitle("Login Form");
         stage.setScene(scene);
         stage.show();
-
-
     }
 
     public static void main(String[] args) {

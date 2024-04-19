@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorLogout" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxlogin.HelloController">
+<AnchorPane fx:id="anchorMenu" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxlogin.HelloController">
    <children>
-      <VBox layoutX="100.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
-         <children>
-            <ColorPicker fx:id="cpPicker" />
-            <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Logout">
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin></Button>
-         </children>
-      </VBox>
+      <Button fx:id="btnLogout" layoutX="431.0" layoutY="460.0" mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Logout" />
+      <Button fx:id="btnSettings" layoutX="407.0" layoutY="418.0" mnemonicParsing="false" onAction="#onSettingsButtonClick" prefHeight="26.0" prefWidth="78.0" text="Settings" />
+      <Button fx:id="btnAddTask" layoutX="330.0" layoutY="93.0" mnemonicParsing="false" onAction="#onAddTaskButtonClick" prefHeight="26.0" prefWidth="155.0" text="Add Task" />
+      <TextField fx:id="taskInput" layoutX="332.0" layoutY="54.0" prefHeight="26.0" prefWidth="155.0" />
+      <Button layoutX="331.0" layoutY="131.0" mnemonicParsing="false" onAction="#refresh" prefHeight="26.0" prefWidth="155.0" text="Show Notes (Refresh)" />
    </children>
 </AnchorPane>

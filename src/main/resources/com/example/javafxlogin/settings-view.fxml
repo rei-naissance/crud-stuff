@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorSettings" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxlogin.SettingsViewController">
+   <children>
+      <CheckBox fx:id="cbxDarkMode" layoutX="369.0" layoutY="32.0" mnemonicParsing="false" onAction="#onCheckDarkMode" text="Dark Mode" />
+      <VBox layoutX="28.0" layoutY="23.0" prefHeight="220.0" prefWidth="164.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Change Username" />
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="164.0" text="Change Password" />
+            <Button fx:id="btnDeleteAccount" mnemonicParsing="false" onAction="#onButtonClickDeleteAccount" prefHeight="26.0" prefWidth="172.0" text="Delete Account" />
+            <Button fx:id="btnGoBack" mnemonicParsing="false" onAction="#onButtonGoBackClick" prefHeight="26.0" prefWidth="277.0" text="Go Back" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

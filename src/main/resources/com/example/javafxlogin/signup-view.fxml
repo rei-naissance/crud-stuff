@@ -2,10 +2,11 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxlogin.SignupViewController">
+<AnchorPane fx:id="signUpAnchor" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxlogin.SignupViewController">
    <children>
-      <GridPane layoutX="144.0" layoutY="121.0" prefHeight="159.0" prefWidth="313.0">
+      <GridPane layoutX="93.0" layoutY="170.0" prefHeight="159.0" prefWidth="313.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -19,12 +20,14 @@
          <children>
             <Label text="Username" />
             <Label text="Password" GridPane.rowIndex="1" />
-            <Button fx:id="btnLogin" mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="btnSignUp" mnemonicParsing="false" text="Sign Up" GridPane.rowIndex="2" />
+            <Button fx:id="btnAltLogin" mnemonicParsing="false" onAction="#onAltLoginButtonClick" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btnAltSignUp" mnemonicParsing="false" onAction="#onAltSignUpButtonClick" text="Sign Up" GridPane.rowIndex="2" />
             <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="usernameField" GridPane.columnIndex="1" />
             <Label text="Already have an account?" GridPane.rowIndex="3" />
             <Label fx:id="signUpError" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="errorText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text fx:id="signError" fill="RED" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="82.13671493530273" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>

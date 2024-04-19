@@ -13,13 +13,20 @@ public class CreateTable {
                     "username VARCHAR(50) NOT NULL," +
                     "password VARCHAR(100) NOT NULL)";
             statement.execute(query);
-            System.out.println("Table creation successful.");
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
 
-    public static void main(String[] args) {
-        create();
+        try (Connection c = MySQLConnection.getConnection();
+             Statement statement = c.createStatement()) {
+            String query = "CREATE TABLE IF NOT EXISTS tasks (" +
+                    "taskid INT AUTO_INCREMENT PRIMARY KEY, " +
+                    "taskdescription VARCHAR(100) NOT NULL," +
+                    "taskstatus BOOLEAN NOT NULL," +
+                    "user_id INT, FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE)";
+            statement.execute(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="anchorLogin" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxlogin.HelloController">
+<AnchorPane fx:id="anchorLogin" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxlogin.HelloController">
    <children>
       <VBox fx:id="vbLogin" alignment="CENTER" layoutX="11.0" layoutY="8.0" prefHeight="202.0" prefWidth="210.0" spacing="20.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="11.0">
           <padding>
@@ -28,12 +28,12 @@
                 <Button fx:id="btnLogin" onAction="#onLoginButtonClick" prefHeight="25.0" prefWidth="84.0" text="Login" GridPane.rowIndex="3" />
                <Label fx:id="usernameLabel" prefHeight="17.0" prefWidth="84.0" text="Username" GridPane.rowIndex="1" />
                <Label fx:id="passwordLabel" prefHeight="17.0" prefWidth="84.0" text="Password" GridPane.rowIndex="2" />
-               <Text fx:id="loginText" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Page" GridPane.columnSpan="2">
+               <Text fx:id="loginText" strokeType="OUTSIDE" strokeWidth="0.0" text="Tasks!" GridPane.columnSpan="2">
                   <font>
                      <Font name="Arial" size="20.0" />
                   </font>
                </Text>
-               <Button fx:id="btnSignUp" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Sign Up" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               <Button fx:id="btnSignUp" mnemonicParsing="false" onAction="#onSignUpButtonClick" prefHeight="25.0" prefWidth="90.0" text="Sign Up" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </children>
          </GridPane>
          <Text fx:id="errorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" />
